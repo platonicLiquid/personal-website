@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bkg: 0deg 9% 98%;
+    --color-content: 0deg 0% 27%;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bkg: 0deg 0% 27%;
+      --color-content: 0deg 9% 98%;
+    }
+  }
+  :root[data-theme="dark"] {
+    --color-bkg: 0deg 0% 27%;
+    --color-content: 0deg 9% 98%;
+  }
+}
