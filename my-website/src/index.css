@@ -20,16 +20,16 @@
   p {
     @apply text-base mb-3;
     a {
-      @apply font-medium underline;
+      @apply font-medium hover:underline;
     }
   }
   hr {
-    @apply h-px opacity-70;
+    @apply h-px opacity-70 pb-2;
     border-color: hsl(0, 0%, 27%);
   }
   [data-theme="dark"] {
     hr {
-      @apply h-px opacity-50 mt-5;
+      @apply h-px opacity-50 pb-2;
       border-color: hsl(40, 28%, 85.3%);
     }
   }

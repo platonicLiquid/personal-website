@@ -14,7 +14,7 @@ export default function ToggleButton() {
   return (
     <>
       <div
-        className="toggle-wrapper"
+        className="toggle-wrapper mr-2"
         onClick={toggleTheme}
         style={{ fontSize: ".75rem" }}
       >

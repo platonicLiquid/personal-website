@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import NavbarFooters from "./components/NavbarFooters";
+import Footers from "./components/Footers";
 import Home from "./pages/Home.mdx";
 import Contact from "./pages/Contact.mdx";
 import CV from "./pages/CV.mdx";
@@ -9,11 +9,11 @@ import CV from "./pages/CV.mdx";
 export default function App() {
   return (
     <>
-      <div className="font-mono font-normal bg-bkg min-h-screen overflow-auto flex flex-col">
+      <div className="font-mono font-normal bg-bkg min-h-screen overflow-x-hidden overflow-y-auto flex flex-col">
         <BrowserRouter>
           <Navbar />
-          <div className="flex-1 flex bg-bkg text-content w-full self-start mx-2">
-            <div className="max-w-screen-md  mx-auto relative">
+          <div className="flex-1 flex bg-bkg text-content w-full self-start mx-2 pt-5">
+            <div className="max-w-screen-md w-full mx-auto justify-start">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
@@ -21,8 +21,7 @@ export default function App() {
               </Routes>
             </div>
           </div>
-
-          <NavbarFooters />
+          <Footers />
         </BrowserRouter>
       </div>
     </>

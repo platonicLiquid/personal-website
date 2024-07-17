@@ -39,12 +39,12 @@ export default function Navbar() {
             </div>
 
             <div className="headerLables grid grid-row-2 pl-3">
-              <div className="text-xl font-bold place-self-start m-0 mt-1">
+              <div className="text-xl font-bold place-self-start m-0 pl-1 mt-1">
                 matthew.yocum.dev
               </div>
-              <ul className="flex justify-items-start items-start -mt-1">
+              <ul className="flex justify-items-start items-start -mt-1 ">
                 {sources.map((source, index) => (
-                  <li className="nav-item mx-1" key={index}>
+                  <li className="nav-item mx-1 hover:underline" key={index}>
                     <Link to={source.url}>{source.name}</Link>
                   </li>
                 ))}

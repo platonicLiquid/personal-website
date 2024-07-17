@@ -10,8 +10,7 @@ lerna-debug.log*
 node_modules
 
 *.local
-public
-src
+
 
 
 # Editor directories and files

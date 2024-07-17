@@ -4,13 +4,13 @@ import githubLight from "../assets/githubLight.svg";
 import LIDark from "../assets/LIDark.svg";
 import LILight from "../assets/LILight.svg";
 
-export default function NavbarFooters() {
+export default function Footers() {
   const [theme, setTheme] = useState(
     document.documentElement.getAttribute("data-theme")
   );
 
   useEffect(() => {
-    const callback = function (mutationsList, observer) {
+    const callback = function (mutationsList: MutationRecord[]) {
       for (const mutation of mutationsList) {
         if (
           mutation.type === "attributes" &&
