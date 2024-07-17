@@ -9,11 +9,14 @@ import CV from "./pages/CV.mdx";
 export default function App() {
   return (
     <>
-      <div className="font-mono font-normal bg-bkg min-h-screen overflow-x-hidden overflow-y-auto flex flex-col">
+      <div
+        className="font-mono font-normal bg-bkg min-h-screen overflow-x-hidden overflow-y-hidden flex flex-col"
+        style={{ scrollbarGutter: "stable" }}
+      >
         <BrowserRouter>
           <Navbar />
-          <div className="flex-1 flex bg-bkg text-content w-full self-start mx-2 pt-5">
-            <div className="max-w-screen-md w-full mx-auto justify-start">
+          <div className="flex-1 flex bg-bkg text-content w-full self-start pt-5">
+            <div className="max-w-screen-md w-full mx-auto justify-start px-20">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />

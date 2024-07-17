@@ -110,3 +110,19 @@
 .svg-footer-filter {
   fill: red;
 }
+
+@media (max-width: 550px) {
+  .hide-image {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+  .update-margin {
+    @apply -ml-5;
+  }
+}
+@media (max-width: 500px) {
+  .hide-toggle {
+    display: none;
+  }
+}
