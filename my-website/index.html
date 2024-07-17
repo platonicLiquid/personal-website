@@ -10,8 +10,15 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>matthew.yocum.dev</title>
+    <script>
+      const currentTheme = localStorage.getItem("theme") || "dark";
+
+      if (currentTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
   </head>
-  <body>
+  <body data-theme="dark">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

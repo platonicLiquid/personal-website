@@ -34,6 +34,9 @@
     }
   }
 }
+body {
+  scrollbar-gutter: stable;
+}
 
 .toggle-wrapper {
   border-radius: 0.5em;

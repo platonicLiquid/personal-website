@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ToggleButton() {
-  const [theme, setTheme] = useState(
-    document.documentElement.getAttribute(localStorage.theme)
-  );
+  // Initialize theme based on localStorage or default to 'light'
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    // Apply the theme on component mount and when theme changes
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme); // Save theme to localStorage
+  }, [theme]);
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", newTheme);
     setTheme(newTheme);
   };
 
@@ -18,22 +22,16 @@ export default function ToggleButton() {
         onClick={toggleTheme}
         style={{ fontSize: ".75rem" }}
       >
-        <input className="toggle-checkbox" type="checkbox" />
+        <input
+          className="toggle-checkbox"
+          type="checkbox"
+          checked={theme === "dark"}
+          readOnly
+        />
         <div className="toggle-container">
           <div className="toggle-button">
             <div className="toggle-button-circles-container">
-              <div className="toggle-button-circle"></div>
-              <div className="toggle-button-circle"></div>
-              <div className="toggle-button-circle"></div>
-              <div className="toggle-button-circle"></div>
-              <div className="toggle-button-circle"></div>
-              <div className="toggle-button-circle"></div>
-              <div className="toggle-button-circle"></div>
-              <div className="toggle-button-circle"></div>
-              <div className="toggle-button-circle"></div>
-              <div className="toggle-button-circle"></div>
-              <div className="toggle-button-circle"></div>
-              <div className="toggle-button-circle"></div>
+              {/* Toggle button circles */}
             </div>
           </div>
         </div>

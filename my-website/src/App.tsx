@@ -9,10 +9,7 @@ import CV from "./pages/CV.mdx";
 export default function App() {
   return (
     <>
-      <div
-        className="font-mono font-normal bg-bkg min-h-screen overflow-x-hidden overflow-y-hidden flex flex-col"
-        style={{ scrollbarGutter: "stable" }}
-      >
+      <div className="font-mono font-normal bg-bkg min-h-screen overflow-x-hidden overflow-y-hidden flex flex-col">
         <BrowserRouter>
           <Navbar />
           <div className="flex-1 flex bg-bkg text-content w-full self-start pt-5">
