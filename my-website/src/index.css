@@ -114,6 +114,12 @@ body {
   fill: red;
 }
 
+@media (max-width: 800px) {
+  p {
+    @apply text-lg;
+  }
+}
+
 @media (max-width: 550px) {
   .hide-image {
     display: none;
