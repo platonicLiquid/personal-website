@@ -68,7 +68,7 @@ export default function Footers() {
   const Footer = (
     <footer className="footer bg-bkg text-content w-full self-end sticky-bottom">
       <nav className="navbar max-w-screen-md mx-auto relative flex justify-between">
-        <div className="flex flex-row justify-items-start content-end pl-20">
+        <div className="flex flex-row justify-items-start content-end pl-16">
           <p className="text-sm pr-2">
             © {new Date().getFullYear()} Matthew Yocum
           </p>

@@ -13,7 +13,7 @@ export default function App() {
         <BrowserRouter>
           <Navbar />
           <div className="flex-1 flex bg-bkg text-content w-full self-start pt-5">
-            <div className="max-w-screen-md w-full mx-auto justify-start px-20">
+            <div className="max-w-screen-md w-full mx-auto justify-start px-16">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />

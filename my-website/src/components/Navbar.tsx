@@ -23,7 +23,7 @@ export default function Navbar() {
     <>
       <nav className="navbar bg-bkg text-content font-medium w-full self-start">
         <div className="max-w-screen-md mx-auto relative flex justify-between">
-          <div className="flex justify-items-start items-center pl-20 ">
+          <div className="flex justify-items-start items-center pl-16 ">
             <div className="navbar-image-container pr-5">
               <img
                 className="navbar-image hide-image"
@@ -57,7 +57,7 @@ export default function Navbar() {
               </ul>
             </div>
           </div>
-          <div className="dark-mode-toggle flex justify-items-end items-center pr-20 hide-toggle">
+          <div className="dark-mode-toggle flex justify-items-end items-center pr-16 hide-toggle">
             <ToggleButton />
           </div>
         </div>
