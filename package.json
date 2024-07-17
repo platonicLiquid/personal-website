@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "sass": "^1.77.6"
+    "sass": "^1.77.6",
+    "vite": "^5.3.4"
   },
   "dependencies": {
     "@mdx-js/rollup": "^3.0.1",
