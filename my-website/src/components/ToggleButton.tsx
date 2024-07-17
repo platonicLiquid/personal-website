@@ -1,4 +1,3 @@
-import { Checkbox } from "@headlessui/react";
 import { useState } from "react";
 
 export default function ToggleButton() {
@@ -14,7 +13,11 @@ export default function ToggleButton() {
 
   return (
     <>
-      <div className="toggle-wrapper" onClick={toggleTheme}>
+      <div
+        className="toggle-wrapper"
+        onClick={toggleTheme}
+        style={{ fontSize: ".75rem" }}
+      >
         <input className="toggle-checkbox" type="checkbox" />
         <div className="toggle-container">
           <div className="toggle-button">

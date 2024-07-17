@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "sass": "^1.77.6"
+  },
+  "dependencies": {
+    "@mdx-js/rollup": "^3.0.1",
+    "react-router-dom": "^6.25.0"
   }
 }

@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "class",
+  darkMode: ["selector", "@media (prefers-color-scheme: dark)"],
   theme: {
+    fontFamily: {
+      mono: ["ui-monospace", "Share Tech Mono"],
+    },
     screens: {
       sm: "480px",
       md: "768px",
