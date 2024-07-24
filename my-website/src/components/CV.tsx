@@ -1,9 +1,9 @@
 import { useState } from "react";
 import CVTabs from "./CVTabs";
 
-import Dev from "../pages/Dev.mdx";
+import Dev from "../pages/Dev.md";
 import Games from "../pages/Games.mdx";
-import TW from "../pages/TW.mdx";
+import TW from "../pages/TW.md";
 
 export default function Tabs() {
   // State to track the currently selected tab
