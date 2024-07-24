@@ -24,12 +24,12 @@
     }
   }
   hr {
-    @apply h-px opacity-70 pb-2;
+    @apply h-px opacity-70 pb-2 mt-8;
     border-color: hsl(0, 0%, 27%);
   }
   [data-theme="dark"] {
     hr {
-      @apply h-px opacity-50 pb-2;
+      @apply h-px opacity-50;
       border-color: hsl(40, 28%, 85.3%);
     }
   }

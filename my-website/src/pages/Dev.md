@@ -1,6 +1,6 @@
 # Riot Org Teams and Products Data Pipeline
 
-**Source:** <a href="https://github.com/platonicLiquid/rg-etl-sample" target="\_blank">rg-etl-sample</a>
+**Source:** <a href="https://github.com/platonicLiquid/rg-etl-sample" target="\_blank">rg-etl-sample GH Repo</a>
 
 **Project Description:**
 
@@ -28,7 +28,7 @@ headers to direct users to the new Notion pages.
 # Kaiser Permanente Data Dictionary Definitions Pipeline
 
 **Source:** <a href="https://github.com/platonicLiquid/kp-webscrape-sample/blob/main/webscrape_example.py"
-target="\_blank"> kp-webscrape-sample</a>
+target="\_blank"> kp-webscrape-sample GH Repo</a>
 
 **Project Description:**
 
@@ -41,7 +41,7 @@ used in tooltips for the dashboards our finance team created.
 
 # matthew.yocum.dev React Website
 
-**Source:** <a href="https://github.com/platonicLiquid/personal-website" target="_blank">matthew.yocum.dev source code</a>
+**Source:** <a href="https://github.com/platonicLiquid/personal-website" target="_blank">matthew.yocum.dev GH Repo</a>
 
 **Project Description:**
 
