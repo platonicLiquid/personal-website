@@ -6,7 +6,7 @@ import LILight from "../assets/LILight.svg";
 
 export default function Footers() {
   const [theme, setTheme] = useState(
-    document.documentElement.getAttribute("data-theme")
+    document.documentElement.getAttribute("data-theme") || "dark"
   );
 
   useEffect(() => {
