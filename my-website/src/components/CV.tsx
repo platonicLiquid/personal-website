@@ -27,7 +27,7 @@ export default function Tabs() {
     <>
       <div>
         <CVTabs setSelectedTab={setSelectedTab} />
-        {renderContent()}
+        <div className="mt-5">{renderContent()}</div>
       </div>
     </>
   );
