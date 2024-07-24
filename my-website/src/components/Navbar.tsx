@@ -21,7 +21,7 @@ export default function Navbar() {
   ];
   return (
     <>
-      <nav className="navbar bg-bkg text-content font-medium w-full self-start">
+      <nav className="navbar bg-bkg text-content font-medium w-full self-start mt-2">
         <div className="max-w-screen-md mx-auto relative flex justify-between">
           <div className="flex justify-items-start items-center pl-16 ">
             <div className="navbar-image-container pr-5">
