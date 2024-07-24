@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function ToggleButton() {
   // Initialize theme based on localStorage or default to 'light'
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   useEffect(() => {
     // Apply the theme on component mount and when theme changes

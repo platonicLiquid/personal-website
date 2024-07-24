@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,14 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>matthew.yocum.dev</title>
     <script>
-      const currentTheme = localStorage.getItem("theme") || "dark";
-
-      if (currentTheme === "dark") {
-        document.documentElement.setAttribute("data-theme", "dark");
+      if (
+        localStorage.getItem("dark-mode") === "true" ||
+        (!("dark-mode" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.querySelector("html").classList.add("dark");
+      } else {
+        document.querySelector("html").classList.remove("dark");
       }
     </script>
   </head>
-  <body data-theme="dark">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

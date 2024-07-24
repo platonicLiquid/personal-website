@@ -34,8 +34,14 @@
     }
   }
 }
-body {
-  scrollbar-gutter: stable;
+
+::-webkit-scrollbar {
+  background: transparent; /* Chrome/Safari/Webkit */
+  width: 0px;
+}
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .toggle-wrapper {
@@ -134,4 +140,8 @@ body {
   .hide-toggle {
     display: none;
   }
+}
+
+.overflow-scroller::-webkit-scrollbar {
+  display: none;
 }
