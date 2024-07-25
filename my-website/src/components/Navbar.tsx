@@ -17,7 +17,7 @@ export default function Navbar() {
   ];
   return (
     <>
-      <nav className="navbar bg-bkg text-content font-medium w-full self-start mt-2">
+      <nav className="navbar bg-bkg text-content font-medium w-full self-start mt-3">
         <div className="max-w-screen-md mx-auto relative flex justify-between">
           <div className="flex justify-items-start items-center pl-16 margin-padding-override ">
             <div className="navbar-image-container pr-5">

@@ -8,7 +8,7 @@ import CV from "./components/CV";
 export default function App() {
   return (
     <>
-      <div className="font-mono font-normal bg-bkg min-h-screen overflow-y-auto flex flex-col">
+      <div className="font-mono font-normal bg-bkg min-h-screen overflow-y-auto overflow-x-none flex flex-col">
         <BrowserRouter>
           <Navbar />
           <div className="flex-1 flex bg-bkg text-content w-full self-start">
