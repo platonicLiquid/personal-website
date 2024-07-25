@@ -1,9 +1,9 @@
 import { useState } from "react";
 import CVTabs from "./CVTabs";
 
-import Dev from "../pages/Dev.md";
-import Games from "../pages/Games.md";
-import TW from "../pages/TW.md";
+import Dev from "../pages/Dev.mdx";
+import Games from "../pages/Games.mdx";
+import TW from "../pages/TW.mdx";
 
 export default function Tabs() {
   // State to track the currently selected tab
@@ -15,7 +15,13 @@ export default function Tabs() {
       case "Software Development":
         return <Dev />;
       case "Games":
-        return <Games />;
+        return (
+          <>
+            <div className="apply-list">
+              <Games />
+            </div>
+          </>
+        );
       case "Technical Writing":
         return <TW />;
       default:

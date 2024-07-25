@@ -33,6 +33,13 @@
       border-color: hsl(40, 28%, 85.3%);
     }
   }
+  div {
+    .apply-list {
+      ul {
+        @apply list-disc list-inside mb-3 ml-3;
+      }
+    }
+  }
 }
 
 ::-webkit-scrollbar {
@@ -137,6 +144,11 @@ html {
   }
 }
 @media (max-width: 500px) {
+  .margin-padding-override {
+    @apply px-5;
+  }
+}
+@media (max-width: 320px) {
   .hide-toggle {
     display: none;
   }
