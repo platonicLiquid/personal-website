@@ -2,7 +2,7 @@ import { useState } from "react";
 import CVTabs from "./CVTabs";
 
 import Dev from "../pages/Dev.md";
-import Games from "../pages/Games.mdx";
+import Games from "../pages/Games.md";
 import TW from "../pages/TW.md";
 
 export default function Tabs() {
