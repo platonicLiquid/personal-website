@@ -16,7 +16,10 @@ export default function Footers() {
           mutation.type === "attributes" &&
           mutation.attributeName === "data-theme"
         ) {
-          setTheme(document.documentElement.getAttribute("data-theme"));
+          // Provide a fallback value to ensure setTheme always receives a string
+          const theme =
+            document.documentElement.getAttribute("data-theme") || "dark"; // Assuming "dark" as the default theme
+          setTheme(theme);
         }
       }
     };
