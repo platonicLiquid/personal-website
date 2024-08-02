@@ -42,7 +42,11 @@ export default function CVTabs({ setSelectedTab }: CVTabsProps) {
                     setSelectedTab(tab.name);
                   }}
                 >
-                  {isMobile ? tab.shortname : tab.name}
+                  {isMobile && tab.name === activeTab
+                    ? tab.name
+                    : isMobile
+                    ? tab.shortname
+                    : tab.name}
                 </a>
               </li>
             );
