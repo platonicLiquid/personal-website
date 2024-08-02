@@ -40,6 +40,10 @@
       }
     }
   }
+  code {
+    @apply inline-block rounded px-1;
+    background-color: hsl(var(--color-content) / 10%);
+  }
 }
 
 ::-webkit-scrollbar {
@@ -133,7 +137,7 @@ html {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
   .hide-image {
     display: none;
     margin: 0;
@@ -142,8 +146,6 @@ html {
   .update-margin {
     @apply -ml-5;
   }
-}
-@media (max-width: 500px) {
   .margin-padding-override {
     @apply px-5;
   }

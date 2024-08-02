@@ -15,7 +15,7 @@ export default function CVTabs({ setSelectedTab }: CVTabsProps) {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 500);
+      setIsMobile(window.innerWidth < 665);
     };
 
     window.addEventListener("resize", handleResize);
