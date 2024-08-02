@@ -10,10 +10,10 @@ lerna-debug.log*
 node_modules
 
 *.local
-dist/*
-!dist/.gitingore
 
-
+dist/assets
+dist/favicon.svg
+dist/index.html
 
 # Editor directories and files
 .vscode/*
