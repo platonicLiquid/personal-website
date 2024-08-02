@@ -15,13 +15,8 @@ export default function Tabs() {
       case "Software Development":
         return <Dev />;
       case "Games":
-        return (
-          <>
-            <div className="apply-list">
-              <Games />
-            </div>
-          </>
-        );
+        return <Games />;
+
       case "Technical Writing":
         return <TW />;
       default:
@@ -33,7 +28,7 @@ export default function Tabs() {
     <>
       <div>
         <CVTabs setSelectedTab={setSelectedTab} />
-        <div className="mt-5">{renderContent()}</div>
+        <div className="apply-list mt-5">{renderContent()}</div>
         <div className="mb-2" />
       </div>
     </>
