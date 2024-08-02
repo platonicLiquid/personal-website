@@ -23,3 +23,12 @@ node_modules
 *.njsproj
 *.sln
 *.sw?
+
+my-website/dist/assets
+my-website/dist/favicon*
+my-website/dist/manifest.webmanifest
+my-website/dist/icon*
+my-website/dist/apple*
+my-website/dist/index.html
+
+
