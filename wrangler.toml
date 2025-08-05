@@ -1,0 +1,6 @@
+name = "personal-website"
+main = "src/main.tsx"
+compatibility_date = "2025-01-27"
+
+[site]
+bucket = "./dist" 

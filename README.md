@@ -1,31 +1,69 @@
-# About
+# React + TypeScript + Vite
 
-This is a website I made to show off my CV and to learn react. Feel free to use
-this as a base for your own website if you want.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-matthew.yocum.dev was made using
-<a href="https://vitejs.dev" target="_blank">Vite</a>,
-<a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>, and
-<a href="https://mdxjs.com" target="_blank">MDXJS.</a>
+Currently, two official plugins are available:
 
-# Deploying the website
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-I use cloudflare pages to build and deploy the website automagically whenever
-`main` is updated. This took quite a bit of niggling to get it to function
-correctly as the insturctions on both Cloudflare's and Vite's website were
-inadequate.
+## Expanding the ESLint configuration
 
-Here are some troubleshooting pointers to help you on your way:
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-- If your root directory for your repo is not the same as the root directory for
-  your website, you will run into problems. Under "Build Configurations" set the
-  root directory to your website folder. In this case it would be `/my-website`.
-- You need to include a `/dist` folder in your repo using the Vite's default
-  build settings. Otherwise this will cause build failures on Cloudflare's end.
-  I'm a noob and ran into trouble getting GitHub to synce an empty directory so
-  I just created and empty `nothing.md` file in `/my-website/dist/` to force the
-  creation of the directory. There's probably a better way to do this, however.
-- Do not use the Vite press framework. Framework needs to be set to "None".
-  Instead just use `npm run build` in "Build command".
-- Fix your typescript erorrs even if everything works locally. Otherwise
-  Cloudflare gets angry and doesn't build your site.
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
