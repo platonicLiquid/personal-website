@@ -7,18 +7,18 @@ const BackgroundContainer = styled(Box)(({ theme }) => ({
   left: 0,
   width: '100vw',
   height: '100vh',
-  backgroundColor: '#ffffff',
+  backgroundColor: '#000000',
   backgroundImage: `
-    radial-gradient(ellipse at top left, transparent 0%, transparent 20%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 1) 80%),
-    linear-gradient(30deg, #f5f5f5 12%, transparent 12.5%, transparent 87%, #f5f5f5 87.5%, #f5f5f5),
-    linear-gradient(150deg, #f5f5f5 12%, transparent 12.5%, transparent 87%, #f5f5f5 87.5%, #f5f5f5),
-    linear-gradient(30deg, #f5f5f5 12%, transparent 12.5%, transparent 87%, #f5f5f5 87.5%, #f5f5f5),
-    linear-gradient(150deg, #f5f5f5 12%, transparent 12.5%, transparent 87%, #f5f5f5 87.5%, #f5f5f5),
-    linear-gradient(60deg, #f0f0f0 25%, transparent 25.5%, transparent 75%, #f0f0f0 75%, #f0f0f0),
-    linear-gradient(60deg, #f0f0f0 25%, transparent 25.5%, transparent 75%, #f0f0f0 75%, #f0f0f0)
+    radial-gradient(ellipse at top left, transparent 0%, transparent 20%, rgba(0, 188, 212, 0.1) 40%, rgba(0, 188, 212, 0.2) 60%, rgba(0, 188, 212, 0.3) 80%),
+    linear-gradient(30deg, rgba(255, 255, 255, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.02) 87.5%, rgba(255, 255, 255, 0.02)),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.02) 87.5%, rgba(255, 255, 255, 0.02)),
+    linear-gradient(30deg, rgba(255, 255, 255, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.02) 87.5%, rgba(255, 255, 255, 0.02)),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.02) 87.5%, rgba(255, 255, 255, 0.02)),
+    linear-gradient(60deg, rgba(255, 255, 255, 0.01) 25%, transparent 25.5%, transparent 75%, rgba(255, 255, 255, 0.01) 75%, rgba(255, 255, 255, 0.01)),
+    linear-gradient(60deg, rgba(255, 255, 255, 0.01) 25%, transparent 25.5%, transparent 75%, rgba(255, 255, 255, 0.01) 75%, rgba(255, 255, 255, 0.01))
   `,
-  backgroundSize: '100% 100%, 80px 140px, 80px 140px, 40px 70px, 40px 70px, 80px 140px, 80px 140px',
-  backgroundPosition: '0 0, 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px',
+  backgroundSize: '100% 100%, 80px 100px, 80px 100px, 40px 50px, 40px 50px, 80px 100px, 80px 100px',
+  backgroundPosition: '0 0, 0 0, 0 0, 40px 50px, 40px 50px, 0 0, 40px 50px',
   zIndex: -1,
 }));
 
