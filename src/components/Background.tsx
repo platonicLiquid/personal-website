@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-const BackgroundContainer = styled(Box)(({ theme }) => ({
+const BackgroundContainer = styled(Box)(() => ({
   position: 'fixed',
   top: 0,
   left: 0,

@@ -9,7 +9,7 @@ const HeaderContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   [theme.breakpoints.down(768)]: {
-    padding: '5px 10px',
+    margin: '5px 10px',
   },
 }));
 
@@ -20,14 +20,14 @@ const HeaderContent = styled(Box)(({ theme }) => ({
   width: '100%',
 }));
 
-const StyledAvatar = styled(Avatar)(({ theme }) => ({
+const StyledAvatar = styled(Avatar)(() => ({
   width: 60,
   height: 60,
   border: '2px solid white',
   flexShrink: 0,
 }));
 
-const NameTypography = styled(Typography)(({ theme }) => ({
+const NameTypography = styled(Typography)(() => ({
   color: '#f5f5f5',
   fontWeight: 'bold',
   fontSize: 'clamp(1.25rem, 4vw, 2.125rem)', // Responsive font size
@@ -35,7 +35,7 @@ const NameTypography = styled(Typography)(({ theme }) => ({
   wordBreak: 'break-word',
 }));
 
-const SubtitleTypography = styled(Typography)(({ theme }) => ({
+const SubtitleTypography = styled(Typography)(() => ({
   color: '#f5f5f5',
   fontSize: 'clamp(0.75rem, 2.5vw, 1.25rem)', // Responsive font size
   lineHeight: 1.2,

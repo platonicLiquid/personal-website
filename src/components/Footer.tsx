@@ -1,4 +1,4 @@
-import { Box, Typography, Link, IconButton } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -11,7 +11,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   [theme.breakpoints.down(768)]: {
-    padding: '0 5px',
+    margin: '0 5px',
   },
 }));
 
@@ -23,7 +23,7 @@ const FooterContent = styled(Box)(({ theme }) => ({
   width: '100%',
 }));
 
-const CopyrightText = styled(Typography)(({ theme }) => ({
+const CopyrightText = styled(Typography)(() => ({
   color: '#f5f5f5',
   fontSize: '0.875rem',
   lineHeight: 1.4,
@@ -34,13 +34,6 @@ const SocialLinks = styled(Box)(({ theme }) => ({
   display: 'flex',
   gap: theme.spacing(1),
   flexShrink: 0,
-}));
-
-const StyledIconButton = styled(IconButton)(({ theme }) => ({
-  color: 'white',
-  '&:hover': {
-    color: 'rgba(255, 255, 255, 0.8)',
-  },
 }));
 
 const Footer: React.FC = () => {
