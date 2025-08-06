@@ -36,7 +36,10 @@ const Footer: React.FC = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        <Typography variant="body2" sx={{ color: '#f5f5f5' }}>
+        <Typography 
+          variant="body2" 
+          sx={{ color: '#f5f5f5' }}
+        >
           © 2024 Matthew Yocum. All rights reserved.
         </Typography>
         <SocialLinks>

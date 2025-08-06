@@ -31,10 +31,18 @@ const Header: React.FC = () => {
           alt="Matthew Yocum"
         />
         <Box>
-          <Typography variant="h4" component="h1" fontWeight="bold" sx={{ color: '#f5f5f5' }}>
+          <Typography 
+            variant="h4" 
+            component="h1" 
+            fontWeight="bold" 
+            sx={{ color: '#f5f5f5' }}
+          >
             Matthew Yocum
           </Typography>
-          <Typography variant="subtitle1" sx={{ color: '#f5f5f5' }}>
+          <Typography 
+            variant="subtitle1" 
+            sx={{ color: '#f5f5f5' }}
+          >
             Software Developer & Technical Writer
           </Typography>
         </Box>
