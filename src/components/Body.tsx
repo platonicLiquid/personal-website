@@ -8,6 +8,7 @@ import Games from './text-components/Games';
 const Body: React.FC = () => {
   const listRef = useRef<HTMLUListElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const sections = [
     {
@@ -51,24 +52,53 @@ const Body: React.FC = () => {
     const index = Array.from(listRef.current.children).indexOf(li);
     if (index >= 0) {
       setActiveIndex(index);
-      setGridColumns(index);
+      if (!isMobile) {
+        setGridColumns(index);
+      }
+    }
+  };
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (isMobile) {
+      handleEvent(e);
+    }
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (!isMobile) {
+      handleEvent(e);
     }
   };
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
     const resize = () => {
       if (!listRef.current) return;
       const w = Math.max(...Array.from(listRef.current.children).map(i => (i as HTMLElement).offsetWidth));
       listRef.current.style.setProperty('--article-width', `${w}`);
     };
+
+    checkMobile();
     resize();
-    window.addEventListener('resize', resize);
+    
+    window.addEventListener('resize', () => {
+      checkMobile();
+      resize();
+    });
+    
     return () => window.removeEventListener('resize', resize);
   }, []);
 
   return (
     <main>
-      <ul ref={listRef} onPointerMove={handleEvent} onClick={handleEvent}>
+      <ul 
+        ref={listRef} 
+        onPointerMove={handlePointerMove} 
+        onClick={handleClick}
+      >
         {sections.map((section, i) => (
           <li key={i} data-active={i === activeIndex}>
             <article>

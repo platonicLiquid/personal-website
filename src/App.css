@@ -80,21 +80,21 @@ body > p {
   color: #fff;
 }
 
-@media (max-width: 768px) {
-  body > p {
-    text-align: center;
-  }
-}
-
 /* App container */
 .app-container {
-  max-width: 768px;
+  max-width: min(768px, 100vw);
   height: 100vh;
   margin: 0 auto;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0;
   box-sizing: border-box;
   overflow: hidden;
+}
+
+main {
+  height: 75vh;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -102,11 +102,11 @@ ul {
   grid-template-columns: 10fr 1fr 1fr 1fr;
   gap: var(--gap);
   list-style: none;
+  height: 100%;
   padding: 0;
   margin: 0;
-  height: 70vh;
-  max-width: calc(100% - 4rem);
-  width: 820px;
+  max-width: 100%;
+  width: 768px;
   transition: grid-template-columns var(--speed) var(--easing);
   container-type: inline-size;
 }
@@ -251,6 +251,7 @@ article .content-wrapper {
   text-wrap: balance;
   color: #fff;
   overflow-y: auto;
+  height: 100%;
   padding-right: 1rem;
   padding-left: 1.5rem;
   margin-bottom: 1rem;
@@ -434,11 +435,174 @@ header {
 footer {
   position: sticky;
   bottom: 0;
-  height: 15vh;
+  height: 10vh;
   background: transparent;
   border: none;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Mobile Styles - Applied last to override desktop styles */
+@media (max-width: 768px) {
+  body > p {
+    text-align: center;
+  }
+  
+  /* Mobile App Container */
+  .app-container {
+    padding: 0 0.5rem;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Mobile Header */
+  header {
+    height: 12vh;
+    padding: 0.5rem 0;
+  }
+  
+  /* Mobile Footer */
+  footer {
+    height: 8vh;
+    padding: 0.5rem 0;
+  }
+  
+  /* Mobile Main Content */
+  main {
+    height: 75vh;
+    overflow: hidden;
+  }
+  
+  /* Mobile Grid Layout */
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    grid-template-columns: none;
+    transition: none;
+    container-type: none;
+  }
+  
+  li {
+    position: relative;
+    min-width: auto;
+    height: auto;
+    min-height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Mobile Article Layout */
+  article {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 60px;
+    padding: 0.75rem;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+  }
+  
+  article h3 {
+    position: static;
+    transform: none;
+    rotate: 0deg;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  article .content-wrapper {
+    display: none;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  article .icon-wrapper {
+    position: absolute;
+    top: 0.75rem;
+    left: calc(100% - 2.5rem);
+    width: auto;
+    height: auto;
+    margin-top: 0;
+    display: block;
+    align-items: unset;
+    justify-content: unset;
+  }
+  
+  article .icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Show content when active on mobile */
+  [data-active='true'] .content-wrapper {
+    display: block;
+  }
+  
+  /* Mobile Text Components */
+  .text-component {
+    padding: 0.5rem 0;
+    font-size: 14px;
+    line-height: 1.4;
+    max-height: calc(100vh - 25vh - 4rem);
+    height: 100%;
+  }
+  
+  .text-component p {
+    margin-bottom: 0.75rem;
+  }
+  
+  .text-component h4 {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-component .project-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .text-component .source-link {
+    font-size: 13px;
+  }
+  
+  /* Mobile Header Content - targeting Material-UI components */
+  header .MuiBox-root {
+    gap: 1rem !important;
+  }
+  
+  header .MuiAvatar-root {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  /* Mobile Footer Content - targeting Material-UI components */
+  footer .MuiBox-root {
+    grid-template-columns: 1fr auto !important;
+    gap: 1rem !important;
+    text-align: left !important;
+  }
+  
+  footer .MuiBox-root > div:last-child {
+    justify-content: flex-end !important;
+  }
+  
+  /* Mobile Typography Adjustments */
+  header .MuiTypography-h4 {
+    font-size: 1.5rem !important;
+  }
+  
+  header .MuiTypography-subtitle1 {
+    font-size: 0.875rem !important;
+  }
 }

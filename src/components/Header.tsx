@@ -8,18 +8,38 @@ const HeaderContainer = styled(Box)(({ theme }) => ({
   zIndex: 1000,
   display: 'flex',
   alignItems: 'center',
+  [theme.breakpoints.down(768)]: {
+    padding: '5px 10px',
+  },
 }));
 
 const HeaderContent = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   gap: theme.spacing(2),
+  width: '100%',
 }));
 
 const StyledAvatar = styled(Avatar)(({ theme }) => ({
   width: 60,
   height: 60,
   border: '2px solid white',
+  flexShrink: 0,
+}));
+
+const NameTypography = styled(Typography)(({ theme }) => ({
+  color: '#f5f5f5',
+  fontWeight: 'bold',
+  fontSize: 'clamp(1.25rem, 4vw, 2.125rem)', // Responsive font size
+  lineHeight: 1.2,
+  wordBreak: 'break-word',
+}));
+
+const SubtitleTypography = styled(Typography)(({ theme }) => ({
+  color: '#f5f5f5',
+  fontSize: 'clamp(0.75rem, 2.5vw, 1.25rem)', // Responsive font size
+  lineHeight: 1.2,
+  wordBreak: 'break-word',
 }));
 
 const Header: React.FC = () => {
@@ -30,21 +50,13 @@ const Header: React.FC = () => {
           src="/headshot.png"
           alt="Matthew Yocum"
         />
-        <Box>
-          <Typography 
-            variant="h4" 
-            component="h1" 
-            fontWeight="bold" 
-            sx={{ color: '#f5f5f5' }}
-          >
+        <Box sx={{ minWidth: 0, flex: 1 }}> {/* Container that allows text to shrink */}
+          <NameTypography variant="h4">
             Matthew Yocum
-          </Typography>
-          <Typography 
-            variant="subtitle1" 
-            sx={{ color: '#f5f5f5' }}
-          >
+          </NameTypography>
+          <SubtitleTypography variant="subtitle1">
             Software Developer & Technical Writer
-          </Typography>
+          </SubtitleTypography>
         </Box>
       </HeaderContent>
     </HeaderContainer>

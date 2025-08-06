@@ -4,25 +4,36 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const FooterContainer = styled(Box)(({ theme }) => ({
-  height: '15vh',
+  height: '10vh',
   position: 'sticky',
   bottom: 0,
   zIndex: 1000,
   display: 'flex',
   alignItems: 'center',
+  [theme.breakpoints.down(768)]: {
+    padding: '0 5px',
+  },
 }));
 
 const FooterContent = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  flexWrap: 'wrap',
+  display: 'grid',
+  gridTemplateColumns: '1fr auto',
   gap: theme.spacing(2),
+  alignItems: 'center',
+  width: '100%',
+}));
+
+const CopyrightText = styled(Typography)(({ theme }) => ({
+  color: '#f5f5f5',
+  fontSize: '0.875rem',
+  lineHeight: 1.4,
+  wordBreak: 'break-word',
 }));
 
 const SocialLinks = styled(Box)(({ theme }) => ({
   display: 'flex',
   gap: theme.spacing(1),
+  flexShrink: 0,
 }));
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
@@ -36,12 +47,9 @@ const Footer: React.FC = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        <Typography 
-          variant="body2" 
-          sx={{ color: '#f5f5f5' }}
-        >
+        <CopyrightText variant="body2">
           © 2024 Matthew Yocum. All rights reserved.
-        </Typography>
+        </CopyrightText>
         <SocialLinks>
           <a
             href="https://github.com/platonicLiquid"
