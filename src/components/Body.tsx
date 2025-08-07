@@ -9,7 +9,6 @@ const Body: React.FC = () => {
   const listRef = useRef<HTMLUListElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);
 
   const sections = [
     {
@@ -60,7 +59,7 @@ const Body: React.FC = () => {
     list.style.gridTemplateRows = template;
   };
 
-  const handleEvent = (e: React.MouseEvent | React.PointerEvent) => {
+  const handleClick = (e: React.MouseEvent) => {
     const li = (e.target as HTMLElement).closest('li');
     if (!li || !listRef.current) return;
     const index = Array.from(listRef.current.children).indexOf(li);
@@ -74,22 +73,9 @@ const Body: React.FC = () => {
     }
   };
 
-  const handleClick = (e: React.MouseEvent) => {
-    if (isTabletOrSmaller) {
-      handleEvent(e);
-    }
-  };
-
-  const handlePointerMove = (e: React.PointerEvent) => {
-    if (!isTabletOrSmaller) {
-      handleEvent(e);
-    }
-  };
-
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
-      setIsTabletOrSmaller(window.innerWidth <= 1000);
     };
 
     const resize = () => {
@@ -113,7 +99,6 @@ const Body: React.FC = () => {
     <main>
       <ul 
         ref={listRef} 
-        onPointerMove={handlePointerMove} 
         onClick={handleClick}
       >
         {sections.map((section, i) => (
