@@ -2,7 +2,7 @@ export default function Games() {
   return (
     <div className="text-component">
       <div className="project-section">
-        <h4>
+        <h4 className="first-element">
           Tales of the Roundtable – Game Design and Playtesting
         </h4>
         <p className="source-link">

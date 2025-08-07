@@ -2,7 +2,7 @@ export default function Development() {
   return (
     <div className="text-component">
       <div className="project-section">
-        <h4>
+        <h4 className="first-element">
           Riot Org Teams and Products Data Pipeline
         </h4>
         <p className="source-link">
@@ -61,8 +61,14 @@ export default function Development() {
 
       <div className="project-section">
         <h4>
-          Fantasy World Map App – map-app.matthew.yocum.dev
+          Fantasy World Map App 
         </h4>
+        <p className="source-link">
+          <strong>Link:</strong>{' '}
+          <a href="map-app.matthew.yocum.dev" target="_blank" rel="noopener noreferrer">
+            Map App
+          </a>
+        </p>
         <p>
           A browser-based map editor and viewer built with Leaflet.js. This app allows users to explore and annotate a fantasy world map. It uses Cloudflare for authentication, 2FA, and storage of user-generated map metadata. Designed for extensibility and performance, it is a work in progress.
         </p>

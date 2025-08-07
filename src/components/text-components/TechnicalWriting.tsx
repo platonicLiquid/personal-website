@@ -2,7 +2,7 @@ export default function TechnicalWriting() {
   return (
     <div className="text-component">
       <div className="project-section">
-        <h4>
+        <h4 className="first-element">
           Riot Games – League Studio Information Architecture
         </h4>
         <p>

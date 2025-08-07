@@ -9,6 +9,7 @@ const Body: React.FC = () => {
   const listRef = useRef<HTMLUListElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTabletOrSmaller, setIsTabletOrSmaller] = useState(false);
 
   const sections = [
     {
@@ -38,12 +39,25 @@ const Body: React.FC = () => {
     if (!list) return;
     const items = Array.from(list.children) as HTMLElement[];
     const template = items
-      .map((_, i) => (i === index ? '10fr' : '1fr'))
+      .map((_, i) => (i === index ? '1fr' : 'min-content'))
       .join(' ');
     items.forEach((el, i) => {
       el.dataset.active = (i === index).toString();
     });
     list.style.gridTemplateColumns = template;
+  };
+
+  const setGridRows = (index: number) => {
+    const list = listRef.current;
+    if (!list) return;
+    const items = Array.from(list.children) as HTMLElement[];
+    const template = items
+      .map((_, i) => (i === index ? '1fr' : 'min-content'))
+      .join(' ');
+    items.forEach((el, i) => {
+      el.dataset.active = (i === index).toString();
+    });
+    list.style.gridTemplateRows = template;
   };
 
   const handleEvent = (e: React.MouseEvent | React.PointerEvent) => {
@@ -52,27 +66,30 @@ const Body: React.FC = () => {
     const index = Array.from(listRef.current.children).indexOf(li);
     if (index >= 0) {
       setActiveIndex(index);
-      if (!isMobile) {
+      if (isMobile) {
+        setGridRows(index);
+      } else {
         setGridColumns(index);
       }
     }
   };
 
   const handleClick = (e: React.MouseEvent) => {
-    if (isMobile) {
+    if (isTabletOrSmaller) {
       handleEvent(e);
     }
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
-    if (!isMobile) {
+    if (!isTabletOrSmaller) {
       handleEvent(e);
     }
   };
 
   useEffect(() => {
-    const checkMobile = () => {
+    const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
+      setIsTabletOrSmaller(window.innerWidth <= 1000);
     };
 
     const resize = () => {
@@ -81,11 +98,11 @@ const Body: React.FC = () => {
       listRef.current.style.setProperty('--article-width', `${w}`);
     };
 
-    checkMobile();
+    checkScreenSize();
     resize();
     
     window.addEventListener('resize', () => {
-      checkMobile();
+      checkScreenSize();
       resize();
     });
     
@@ -102,9 +119,12 @@ const Body: React.FC = () => {
         {sections.map((section, i) => (
           <li key={i} data-active={i === activeIndex}>
             <article>
-              <h3>{section.title}</h3>
+              <div className="title-wrapper">
+                <h3>{section.title}</h3>
+                <div className="icon-wrapper">{section.icon}</div>
+              </div>
               <div className="content-wrapper">{section.description}</div>
-              <div className="icon-wrapper">{section.icon}</div>
+              
               {/* <img src={section.image} alt="" /> */}
             </article>
           </li>
