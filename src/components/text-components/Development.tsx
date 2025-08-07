@@ -61,11 +61,11 @@ export default function Development() {
 
       <div className="project-section">
         <h4>
-          Fantasy World Map App 
+          Fantasy World Map App
         </h4>
         <p className="source-link">
           <strong>Link:</strong>{' '}
-          <a href="map-app.matthew.yocum.dev" target="_blank" rel="noopener noreferrer">
+          <a href="https://map-app.matthew.yocum.dev" target="_blank" rel="noopener noreferrer">
             Map App
           </a>
         </p>
@@ -76,9 +76,7 @@ export default function Development() {
 
       <div className="project-section">
         <h4>
-          <a href="https://eetah.io" target="_blank" rel="noopener noreferrer">
-            eetah.io – Web and App Development
-          </a>
+          eetah.io – Web and App Development
         </h4>
         <p>
           <a href="https://eetah.io" target="_blank" rel="noopener noreferrer">
@@ -90,15 +88,13 @@ export default function Development() {
 
       <div className="project-section">
         <h4>
-          <a href="https://writing-pros.com" target="_blank" rel="noopener noreferrer">
-            writing-pros.com – Technical & Marketing Content
-          </a>
+          writing-pros.com – Technical & Marketing Content
         </h4>
         <p>
           <a href="https://writing-pros.com" target="_blank" rel="noopener noreferrer">
             writing-pros.com
           </a>{' '}
-          is a lightweight Vite site for a writing consultancy I co-founded. While the frontend is simple, the business focuses on high-quality content delivery for technical and manufacturing clients. I handle site maintenance, branding, and content infrastructure.
+          is a writing consultancy I co-founded. I handle lead generation and technical writing/editing. This includes scoping client needs, translating complex topics into clear deliverables, and ensuring consistent voice and accuracy across documents.
         </p>
       </div>
     </div>

@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             <GitHubIcon />
           </a>
           <a
-            href="https://linkedin.com/in/matthew-yocum"
+            href="https://linkedin.com/in/myocum"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
