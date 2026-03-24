@@ -2,31 +2,35 @@ export default function About() {
   return (
     <div className="text-component">
       <p className="first-element">
-        Hi, I'm Matthew Yocum.
-      </p>
-      
-      <p>
-        I'm a software developer and technical writer with a strong background in building data pipelines, web scraping tools, API integrations, and managing databases. My primary language is Python, though I've also worked professionally with JavaScript, SQL, and VBA, among others.
-      </p>
-      
-      <p>
-        I began coding in 2014 and have consistently used programming to streamline and enhance workflows across all my roles. Since 2019, I've been transitioning from a technical writing career into full-time software development, taking on increasingly complex projects to deepen my engineering experience. At Riot Games, I spent my final 9 months contributing nearly full-time as a developer.
-      </p>
-      
-      <p>
-        After Riot, I chose to focus full-time on building my own products and delivering client-focused solutions that combine modern frontends, reliable backends, and thoughtful documentation. I founded two companies: <strong>eetah.io</strong>, a web and app development practice where I build with Vite on the frontend and Cloudflare Workers on the backend (including authentication, 2FA, customer management, and Stripe integration); and <strong>writing-pros.com</strong>, a technical writing and copywriting firm I co-founded to deliver clear, high-impact content for technology and manufacturing clients. Growing these businesses has allowed me to keep shipping, learning, and refining my craft.
+        I am a software developer and technical writer driven by the mechanics of
+        data and the clarity of its delivery. My work centers on the
+        construction of robust data pipelines, scraping utilities, and API
+        integrations. While Python is my primary tool of choice, I am
+        well-versed in the architectures of JavaScript, SQL, and VBA.
       </p>
 
       <p>
-        Beyond client work, I continue to develop personal projects using React and Vite. I’ve integrated AI capabilities via OpenAI’s API—focusing on prompt engineering and intelligent application features—and earned a machine learning certification, applying that foundation to explore practical, real-world use cases.
+        My tenure in code began in 2014, born from a desire to automate the
+        mundane and refine the complex. Since 2019, I have methodically shifted
+        my focus from pure technical writing to full-time engineering. This
+        culminated at Riot Games, where I spent my final three quarters
+        operating almost exclusively as a developer within the studio.
       </p>
-      
+
       <p>
-        I believe in clear, effective communication—especially when translating complex technical topics into accessible language. I'm a strong advocate for “docs-as-code” practices and value maintainable, well-documented systems.
+        Following my time at Riot, I elected to establish my own practices. I
+        founded eetah.io, a development shop where I build modern frontends via
+        Vite and backends through Cloudflare Workers; and writing-pros.com, a
+        firm dedicated to high-impact technical documentation. Whether I am
+        integrating AI via OpenAI&apos;s API or managing a Stripe deployment, my
+        goal remains the same: to ship maintainable, well-documented systems
+        that survive the &quot;winter&quot; of long-term use.
       </p>
-      
+
       <p>
-        Outside of tech, I enjoy gaming, Byzantine chant and choral singing, exploring philosophy and political science, and designing tabletop role-playing games.
+        When the screen is dark, I am likely engaged in Byzantine chant,
+        designing tabletop systems, or debating the finer points of political
+        philosophy.
       </p>
     </div>
   );

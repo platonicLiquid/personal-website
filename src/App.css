@@ -296,6 +296,34 @@ article .content-wrapper {
   margin-bottom: .5rem;
 }
 
+/* Text overflow scrollbars: dark thumb, mostly transparent track */
+article .content-wrapper,
+.text-component {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.48) transparent;
+}
+
+article .content-wrapper::-webkit-scrollbar,
+.text-component::-webkit-scrollbar {
+  width: 9px;
+}
+
+article .content-wrapper::-webkit-scrollbar-track,
+.text-component::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+article .content-wrapper::-webkit-scrollbar-thumb,
+.text-component::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+  border-radius: 4.5px;
+}
+
+article .content-wrapper::-webkit-scrollbar-thumb:hover,
+.text-component::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
+
 /* Essential Header and Footer */
 header {
   position: sticky;

@@ -2,99 +2,63 @@ export default function Development() {
   return (
     <div className="text-component">
       <div className="project-section">
-        <h4 className="first-element">
-          Riot Org Teams and Products Data Pipeline
-        </h4>
+        <h4 className="first-element">Riot Org Data Pipeline</h4>
         <p className="source-link">
           <strong>Source:</strong>{' '}
-          <a href="https://github.com/platonicLiquid/rg-etl-sample" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/platonicLiquid/rg-etl-sample"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             rg-etl-sample GH Repo
           </a>
         </p>
         <p>
-          While at Riot Games, I proposed, designed, and implemented a Python data pipeline to scrape Riot's teams and products data and load it into corresponding Notion databases.
+          I designed and deployed a Python-based ETL pipeline to harvest
+          Riot&apos;s internal team and product data, automatically populating
+          corresponding Notion databases to ensure organizational transparency.
         </p>
       </div>
 
       <div className="project-section">
-        <h4>
-          League Studio Confluence to Notion Migration
-        </h4>
+        <h4>Confluence to Notion Migration (League Studio)</h4>
         <p>
-          During my tenure at Riot Games, we transitioned from Confluence to{' '}
-          <a href="https://notion.so" target="_blank" rel="noopener noreferrer">
-            Notion
-          </a>{' '}
-          for documentation. I developed migration strategies and built Python tooling to automate page transfers, verify integrity, generate reports, and update Confluence pages with links to their Notion replacements.
+          During a studio-wide shift in infrastructure, I developed the
+          migration logic and Python tooling necessary to move documentation en
+          masse. This included integrity verification, automated reporting, and
+          the systematic redirection of legacy links to their new Notion
+          counterparts.
         </p>
       </div>
 
       <div className="project-section">
-        <h4>
-          Kaiser Permanente Data Dictionary Definitions Pipeline
-        </h4>
+        <h4>Kaiser Permanente Data Dictionary Pipeline</h4>
         <p className="source-link">
           <strong>Source:</strong>{' '}
-          <a href="https://github.com/platonicLiquid/kp-webscrape-sample/blob/main/webscrape_example.py" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/platonicLiquid/kp-webscrape-sample"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             kp-webscrape-sample GH Repo
           </a>
         </p>
         <p>
-          I built a Python pipeline to extract data dictionary definitions from Confluence and load them into a SQL database, supporting live tooltips in financial dashboards.
+          To support financial dashboards, I engineered a pipeline that extracted
+          data definitions from Confluence and loaded them into a SQL
+          environment, enabling live, hover-over tooltips for end-users.
         </p>
       </div>
 
       <div className="project-section">
-        <h4>
-          Personal Website – matthew.yocum.dev
-        </h4>
+        <h4>Fantasy World Map App</h4>
         <p className="source-link">
-          <strong>Source:</strong>{' '}
-          <a href="https://github.com/platonicLiquid/personal-website" target="_blank" rel="noopener noreferrer">
-            personal-website GH Repo
-          </a>
+          <strong>Status:</strong> In Progress
         </p>
         <p>
-          A modern portfolio site built with React, Vite, and deployed via Cloudflare Pages. This site is actively maintained and serves as the central showcase for all professional work and side projects.
-        </p>
-      </div>
-
-      <div className="project-section">
-        <h4>
-          Fantasy World Map App
-        </h4>
-        <p className="source-link">
-          <strong>Link:</strong>{' '}
-          <a href="https://map-app.matthew.yocum.dev" target="_blank" rel="noopener noreferrer">
-            Map App
-          </a>
-        </p>
-        <p>
-          A browser-based map editor and viewer built with Leaflet.js. This app allows users to explore and annotate a fantasy world map. It uses Cloudflare for authentication, 2FA, and storage of user-generated map metadata. Designed for extensibility and performance, it is a work in progress.
-        </p>
-      </div>
-
-      <div className="project-section">
-        <h4>
-          eetah.io – Web and App Development
-        </h4>
-        <p>
-          <a href="https://eetah.io" target="_blank" rel="noopener noreferrer">
-            eetah.io
-          </a>{' '}
-          is a professional services site for my web/app development business. The frontend is built using Vite, with a backend powered by Cloudflare Workers. Features include user authentication, two-factor authentication, customer account management, and Stripe integration for payments. All infrastructure is designed for scalability and performance.
-        </p>
-      </div>
-
-      <div className="project-section">
-        <h4>
-          writing-pros.com – Technical & Marketing Content
-        </h4>
-        <p>
-          <a href="https://writing-pros.com" target="_blank" rel="noopener noreferrer">
-            writing-pros.com
-          </a>{' '}
-          is a writing consultancy I co-founded. I handle lead generation and technical writing/editing. This includes scoping client needs, translating complex topics into clear deliverables, and ensuring consistent voice and accuracy across documents.
+          A browser-based cartography tool built with Leaflet.js. It features a
+          private authentication system and 2FA via Cloudflare, allowing users to
+          annotate and store metadata for custom world maps.
         </p>
       </div>
     </div>
