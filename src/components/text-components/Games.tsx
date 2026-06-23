@@ -4,7 +4,7 @@ export default function Games() {
       <div className="project-section">
         <h4 className="first-element">Tales of the Roundtable</h4>
         <p className="source-link">
-          <strong>Kickstarter:</strong>{' '}
+          <strong>Kickstarter:</strong>{" "}
           <a
             href="https://www.kickstarter.com/projects/mythweavergames/tales-of-the-round-table/description"
             target="_blank"
@@ -24,7 +24,7 @@ export default function Games() {
         </p>
         <p>
           <strong>The Calculus of Play:</strong> While traditional systems like
-          ACKS or Pathfinder thrive on long-term &quot;engine building&quot; and
+          DnD or Pathfinder thrive on long-term &quot;engine building&quot; and
           campaign longevity, Tales was an exercise in constraint. We
           successfully traded the deep emotional peaks of a year-long campaign
           for a highly accessible, replayable experience that removes the

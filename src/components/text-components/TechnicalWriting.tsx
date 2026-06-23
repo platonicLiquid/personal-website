@@ -6,12 +6,13 @@ export default function TechnicalWriting() {
           Information Architecture: Resolving the &quot;Docs Death Spiral&quot;
         </h4>
         <p>
-          At Riot Games, I spearheaded an initiative to diagnose systemic failures
-          in internal documentation. We identified a &quot;death spiral&quot;
-          caused by fragmented planning and legacy migrations that had eroded
-          developer trust. To halt this decline, I reorganized the architecture
-          around product-centric models and executed a massive audit, refining
-          over 5,000 pages to restore the utility of the studio&apos;s knowledge
+          At Riot Games, I spearheaded an initiative to diagnose systemic
+          failures in internal documentation. We identified a &quot;death
+          spiral&quot; caused by fragmented planning, stale content, and legacy
+          migrations that had eroded developer trust. To halt this decline, I
+          reorganized and redesigned the information architecture around
+          product-centric models and executed a massive audit, refining over
+          5,000 pages to restore the utility of the studio&apos;s knowledge
           base.
         </p>
       </div>

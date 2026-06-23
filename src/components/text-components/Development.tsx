@@ -4,7 +4,7 @@ export default function Development() {
       <div className="project-section">
         <h4 className="first-element">Riot Org Data Pipeline</h4>
         <p className="source-link">
-          <strong>Source:</strong>{' '}
+          <strong>Source:</strong>{" "}
           <a
             href="https://github.com/platonicLiquid/rg-etl-sample"
             target="_blank"
@@ -34,7 +34,7 @@ export default function Development() {
       <div className="project-section">
         <h4>Kaiser Permanente Data Dictionary Pipeline</h4>
         <p className="source-link">
-          <strong>Source:</strong>{' '}
+          <strong>Source:</strong>{" "}
           <a
             href="https://github.com/platonicLiquid/kp-webscrape-sample"
             target="_blank"
@@ -44,21 +44,9 @@ export default function Development() {
           </a>
         </p>
         <p>
-          To support financial dashboards, I engineered a pipeline that extracted
-          data definitions from Confluence and loaded them into a SQL
+          To support financial dashboards, I engineered a pipeline that
+          extracted data definitions from Confluence and loaded them into a SQL
           environment, enabling live, hover-over tooltips for end-users.
-        </p>
-      </div>
-
-      <div className="project-section">
-        <h4>Fantasy World Map App</h4>
-        <p className="source-link">
-          <strong>Status:</strong> In Progress
-        </p>
-        <p>
-          A browser-based cartography tool built with Leaflet.js. It features a
-          private authentication system and 2FA via Cloudflare, allowing users to
-          annotate and store metadata for custom world maps.
         </p>
       </div>
     </div>
